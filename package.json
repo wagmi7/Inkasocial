@@ -1,0 +1,36 @@
+{
+  "name": "@inkasocial/monorepo",
+  "description": "Full-Stack NFT Based Socail DApp for Substrate-based networks and ink! Smart Contracts",
+  "version": "0.0.1",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=16 <=18",
+    "pnpm": "8"
+  },
+  "scripts": {
+    "dev": "pnpm run --filter frontend dev",
+    "build": "pnpm run --filter frontend build",
+    "start": "pnpm run --filter frontend start",
+    "lint": "pnpm run --filter frontend lint",
+    "lint:fix": "pnpm run --filter frontend lint:fix",
+    "prepare": "husky install"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "next": "^13.0.0"
+      }
+    }
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "next": "^13.4.9",
+    "typescript": "^5.1.6"
+  }
+}
